@@ -6,7 +6,7 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Data (avoid pushing huge/raw data)
+# Data (avoid pushing large raw CSV files)
 *.csv
 
 # OS
@@ -15,4 +15,19 @@ Thumbs.db
 
 # Virtual env
 venv/
+.venv/
 .env/
+env/
+
+# Temp files
+inspect_nb.py
+
+# Downloaded ZIP (don't commit this)
+model_artifacts.zip
+
+# ── Streamlit deployment ──────────────────────────────────────
+# Model artifacts MUST be committed to Git for Streamlit Cloud.
+# The lines below FORCE Git to track .pkl files inside model_artifacts/
+# even if any parent rule might exclude them.
+!model_artifacts/
+!model_artifacts/*.pkl
